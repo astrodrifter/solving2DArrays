@@ -15,31 +15,8 @@
  * */
 
 #include <stdio.h>
-void solveRow(int *myArray, int *totalRow, int row, int size)
-{
-   //sum row
-   int sum = 0;
-   int difference = 0;
-   for(int j = 0; j < size; j++)
-    {
-            sum += &myArray[row][j]; 
-    }
-    
-    // minus from total
-    difference = totalRow[row]-sum;
-        
-    //enter difference into array empty space
-    for(int i = 0; i < size; i++)
-    {
-        if(&myArray[row][i] == -1)
-        {
-            &myArray[row][i] = difference;
-        }
-    }
+void solveRow(int *myArray, int *totalRow, int row, int size);
 
-   //minus from total of row
-   //enter difference into array empty space
-}
 int main(int argc, char **argv)
 {
     //get size of array
@@ -122,4 +99,30 @@ int main(int argc, char **argv)
     }
 	*/
 	return 0;
+}
+
+void solveRow(int *myArray, int *totalRow, int row, int size)
+{
+   //sum row
+   int sum = 0;
+   int difference = 0;
+   for(int j = 0; j < size; j++)
+    {
+            sum += &myArray[row][j]; 
+    }
+    
+    // minus from total
+    difference = totalRow[row]-sum;
+        
+    //enter difference into array empty space
+    for(int i = 0; i < size; i++)
+    {
+        if(myArray[row][i] == -1)
+        {
+            myArray[row][i] = difference;
+        }
+    }
+
+   //minus from total of row
+   //enter difference into array empty space
 }
