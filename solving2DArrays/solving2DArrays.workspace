@@ -2,19 +2,22 @@
 <CodeLite_Workspace Name="solving2DArrays" Database="" Version="10.0.0">
   <Project Name="solving2DArrays" Path="solving2DArrays/solving2DArrays.project" Active="No"/>
   <Project Name="solvingARow" Path="solvingARow/solvingARow.project" Active="No"/>
-  <Project Name="usingPointers" Path="usingPointers/usingPointers.project" Active="Yes"/>
+  <Project Name="usingPointers" Path="usingPointers/usingPointers.project" Active="No"/>
+  <Project Name="usingPointers2D" Path="usingPointers2D/usingPointers2D.project" Active="Yes"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug" Selected="yes">
       <Environment/>
       <Project Name="solving2DArrays" ConfigName="Debug"/>
       <Project Name="solvingARow" ConfigName="Debug"/>
       <Project Name="usingPointers" ConfigName="Debug"/>
+      <Project Name="usingPointers2D" ConfigName="Debug"/>
     </WorkspaceConfiguration>
     <WorkspaceConfiguration Name="Release" Selected="yes">
       <Environment/>
       <Project Name="solving2DArrays" ConfigName="Release"/>
       <Project Name="solvingARow" ConfigName="Release"/>
       <Project Name="usingPointers" ConfigName="Release"/>
+      <Project Name="usingPointers2D" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
 </CodeLite_Workspace>

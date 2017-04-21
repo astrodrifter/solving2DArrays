@@ -13,7 +13,6 @@ void modifyArray(int *numsPtr, int size)
 
 int main()
 {
-    ;
     int nums[5] = {1, 2, -1, 3, -1};
     modifyArray(nums, 5);
     
