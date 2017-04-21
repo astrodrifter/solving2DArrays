@@ -1,8 +1,8 @@
 .PHONY: clean All
 
 All:
-	@echo "----------Building project:[ solvingARow - Debug ]----------"
-	@cd "solvingARow" && "$(MAKE)" -f  "solvingARow.mk"
+	@echo "----------Building project:[ usingPointers - Debug ]----------"
+	@cd "usingPointers" && "$(MAKE)" -f  "usingPointers.mk"
 clean:
-	@echo "----------Cleaning project:[ solvingARow - Debug ]----------"
-	@cd "solvingARow" && "$(MAKE)" -f  "solvingARow.mk" clean
+	@echo "----------Cleaning project:[ usingPointers - Debug ]----------"
+	@cd "usingPointers" && "$(MAKE)" -f  "usingPointers.mk" clean
