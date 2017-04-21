@@ -3,7 +3,8 @@
   <Project Name="solving2DArrays" Path="solving2DArrays/solving2DArrays.project" Active="No"/>
   <Project Name="solvingARow" Path="solvingARow/solvingARow.project" Active="No"/>
   <Project Name="usingPointers" Path="usingPointers/usingPointers.project" Active="No"/>
-  <Project Name="usingPointers2D" Path="usingPointers2D/usingPointers2D.project" Active="Yes"/>
+  <Project Name="usingPointers2D" Path="usingPointers2D/usingPointers2D.project" Active="No"/>
+  <Project Name="solvingOneRow" Path="solvingOneRow/solvingOneRow.project" Active="Yes"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug" Selected="yes">
       <Environment/>
@@ -11,6 +12,7 @@
       <Project Name="solvingARow" ConfigName="Debug"/>
       <Project Name="usingPointers" ConfigName="Debug"/>
       <Project Name="usingPointers2D" ConfigName="Debug"/>
+      <Project Name="solvingOneRow" ConfigName="Debug"/>
     </WorkspaceConfiguration>
     <WorkspaceConfiguration Name="Release" Selected="yes">
       <Environment/>
@@ -18,6 +20,7 @@
       <Project Name="solvingARow" ConfigName="Release"/>
       <Project Name="usingPointers" ConfigName="Release"/>
       <Project Name="usingPointers2D" ConfigName="Release"/>
+      <Project Name="solvingOneRow" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
 </CodeLite_Workspace>

@@ -1,8 +1,8 @@
 .PHONY: clean All
 
 All:
-	@echo "----------Building project:[ usingPointers2D - Debug ]----------"
-	@cd "usingPointers2D" && "$(MAKE)" -f  "usingPointers2D.mk"
+	@echo "----------Building project:[ solvingOneRow - Debug ]----------"
+	@cd "solvingOneRow" && "$(MAKE)" -f  "solvingOneRow.mk"
 clean:
-	@echo "----------Cleaning project:[ usingPointers2D - Debug ]----------"
-	@cd "usingPointers2D" && "$(MAKE)" -f  "usingPointers2D.mk" clean
+	@echo "----------Cleaning project:[ solvingOneRow - Debug ]----------"
+	@cd "solvingOneRow" && "$(MAKE)" -f  "solvingOneRow.mk" clean
