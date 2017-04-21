@@ -1,48 +1,132 @@
-#include <stdio.h>
+/* A puzzle grid is an N-by-N grid in which every number in the 
+ * grid must be a single digit number. Therefore, only numbers 
+ * in the range from 0 to 9 are allowed. Duplicate numbers are 
+ * allowed. At the end of each row and column there is a number 
+ * representing the sum of that row or column. For example, in 
+ * the figure below the first row has a sum of 6 (= 5 + 0 + 1) 
+ * and the third column has a sum of 9 (= 1 + 6 + 2).
+ * 
+ * Write a puzzle solver program that will solve these types of 
+ * puzzles. Your program will need to read grid data from a provided 
+ * file and solve the puzzle based on the file’s input data.
+ * 
+ * Dhruva O'Shea 22/04/17
+ * 
+ * 
+ * 
+Test data 1: (solves)
+   5
+   -1 7 -1 5 -1
+   7 -1 5 -1 2
+   2 2 4 -1 6
+   -1 -1 7 5 4
+   5 4 4 4 -1
+   20 20 20 19 18 
+   17 15 25 25 15
 
+Test data 2. (solves)
+   3
+   2 4 -1
+   1 -1 1
+   -1 8 -1
+   8 9 16
+   8 9 16
+    
+Test data 3. (solves)
+    4
+    0 0 -1 4
+    2 9 4 -1
+    -1 8 3 -1
+    0 -1 0 0
+    11 24 19 9
+    2 26 14 21
+    
+Test data 4.  (cannot solve yet with my one epmty space algorythm)
+    4
+    -1 -1 -1 1
+    9 0 -1 -1
+    1 3 -1 -1
+    0 8 6 -1
+    7 10 14 19
+    10 12 18 10
+ 
+Test data 5. (solves)
+    5
+    -1 -1 0 -1 7
+    0 4 5 -1 4
+    7 1 -1 9 8
+    0 5 0 -1 -1
+    3 -1 -1 1 8
+    15 15 29 22 23
+    15 14 17 22 36
+*/
+ 
+#include <stdio.h>
 
 int main()
 {
-    //example array puzzle. -1 = empty spaces.
-    int nums[5][5] = {{-1, 7, -1, 5, -1},
-                      {7, -1, 5, -1, 2},
-                      {2, 2, 4, -1, 6},
-                      {-1, -1, 7, 5, 4},
-                      {5, 4, 4, 4, -1}};
+    //start message
+    printf("Enter your array data.\n");
+    //get size of array
+    int size;
+    scanf("%i",&size);
+    
+    //initalise array
+    int nums[size][size];
+    
+    //enter values into array
+    for(int i = 0; i < size; i++)
+    {
+        for(int j = 0; j < size; j++)
+        {
+            scanf("%i",&nums[i][j]);
+        }
+    }
+    
+    //get totals
+    int rowsTotals[size];
+    for(int i = 0; i < size; i++)
+    {
+        scanf("%i",&rowsTotals[i]);
+    }
+    
+    int colsTotals[size];
+    for(int i = 0; i < size; i++)
+    {
+        scanf("%i",&colsTotals[i]);
+    }
     
     //print unsolved array
     printf("\nunSolved array:\n");
-    for(int i = 0; i < 5; i++)
+    for(int i = 0; i < size; i++)
     {
-        for(int j = 0; j < 5; j++)
+        for(int j = 0; j < size; j++)
         {
             printf("%i ",nums[i][j]);
         }
         printf("\n");
     }
     
-    //rows total array
-    int rowsTotals[5] = {20, 20, 20, 19, 18};
     printf("\nRows sums:\n");
-    for(int i = 0; i < 5; i++)
+    for(int i = 0; i < size; i++)
     {
         printf("%i ",rowsTotals[i]);
     }
-    //columns total array
-    int colsTotals[5] = {17, 15, 25, 25, 15};
+    
     printf("\n\nColumn sums:\n");
-    for(int i = 0; i < 5; i++)
+    for(int i = 0; i < size; i++)
     {
         printf("%i ",colsTotals[i]);
     }
     printf("\n\n");
+    
     int solved = 0;
     while(solved != 1)
     {
         int countEmpty = 0;
-        for(int i = 0; i< 5; i++)
+        for(int i = 0; i< size; i++)
         {
-            for(int j = 0; j < 5; j++)
+            for(int j = 0; j < size; j++)
             {
                 if(nums[i][j] == -1)
                 {
@@ -56,10 +140,10 @@ int main()
         }
         //check if row has one empty and solve - working
         int sumRow, countRow;
-        for(int i = 0; i < 5; i++) // for each row
+        for(int i = 0; i < size; i++) // for each row
         {
             sumRow = 0, countRow = 0;
-            for(int j = 0; j < 5; j++) // for each column
+            for(int j = 0; j < size; j++) // for each column
             {
                 sumRow += nums[i][j];
                 if(nums[i][j] == -1)
@@ -71,7 +155,7 @@ int main()
             if(countRow == 1)
             {
                 int difRow = rowsTotals[i] - sumRow;
-                for(int j = 0; j < 5; j++)
+                for(int j = 0; j < size; j++)
                 {
                     if(nums[i][j] == -1)
                     {
@@ -84,10 +168,10 @@ int main()
     
         //check if row has one empty and solve - working
         int sumCol, countCol;
-        for(int i = 0; i < 5; i++) // for each row
+        for(int i = 0; i < size; i++) // for each row
         {
             sumCol = 0, countCol = 0;
-            for(int j = 0; j < 5; j++) // for each column
+            for(int j = 0; j < size; j++) // for each column
             {
                 sumCol += nums[j][i];
                 if(nums[j][i] == -1)
@@ -99,7 +183,7 @@ int main()
             if(countCol == 1)
             {
                 int difCol = colsTotals[i] - sumCol;
-                for(int j = 0; j < 5; j++)
+                for(int j = 0; j < size; j++)
                 {
                     if(nums[j][i] == -1)
                     {
@@ -113,9 +197,9 @@ int main()
     }
     //print solved array
     printf("Solved array:\n");
-    for(int i = 0; i < 5; i++)
+    for(int i = 0; i < size; i++)
     {
-        for(int j = 0; j < 5; j++)
+        for(int j = 0; j < size; j++)
         {
             printf("%i ",nums[i][j]);
         }
