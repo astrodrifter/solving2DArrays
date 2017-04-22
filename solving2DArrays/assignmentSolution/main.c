@@ -10,6 +10,16 @@
  * puzzles. Your program will need to read grid data from a provided 
  * file and solve the puzzle based on the file’s input data.
  * 
+ * My solution algorithm is as follows:
+ * 
+ * while not solved
+ *      check rows
+ *      if row has one empty space 
+ *          solve
+ *      check column
+ *      if column has one epty space 
+ *          solve
+ * 
  * Dhruva O'Shea 22/04/17
  * 
  * 
@@ -41,7 +51,7 @@ Test data 3. (solves)
     11 24 19 9
     2 26 14 21
     
-Test data 4.  (cannot solve yet with my one epmty space algorythm)
+Test data 4.  (cannot solve yet with my one epmty space algorithm)
     4
     -1 -1 -1 1
     9 0 -1 -1
