@@ -7,7 +7,9 @@
   <Project Name="solvingOneRow" Path="solvingOneRow/solvingOneRow.project" Active="No"/>
   <Project Name="twoDpuzzle" Path="twoDpuzzle/twoDpuzzle.project" Active="No"/>
   <Project Name="assignmentSolution" Path="assignmentSolution/assignmentSolution.project" Active="No"/>
-  <Project Name="assSolveFunctions" Path="assSolveFunctions/assSolveFunctions.project" Active="Yes"/>
+  <Project Name="assSolveFunctions" Path="assSolveFunctions/assSolveFunctions.project" Active="No"/>
+  <Project Name="get2DarrayFunction" Path="get2DarrayFunction/get2DarrayFunction.project" Active="No"/>
+  <Project Name="assignmentTools" Path="assignmentTools/assignmentTools.project" Active="Yes"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug" Selected="yes">
       <Environment/>
@@ -19,6 +21,8 @@
       <Project Name="twoDpuzzle" ConfigName="Debug"/>
       <Project Name="assignmentSolution" ConfigName="Debug"/>
       <Project Name="assSolveFunctions" ConfigName="Debug"/>
+      <Project Name="get2DarrayFunction" ConfigName="Debug"/>
+      <Project Name="assignmentTools" ConfigName="Debug"/>
     </WorkspaceConfiguration>
     <WorkspaceConfiguration Name="Release" Selected="yes">
       <Environment/>
@@ -30,6 +34,8 @@
       <Project Name="twoDpuzzle" ConfigName="Release"/>
       <Project Name="assignmentSolution" ConfigName="Release"/>
       <Project Name="assSolveFunctions" ConfigName="Release"/>
+      <Project Name="get2DarrayFunction" ConfigName="Release"/>
+      <Project Name="assignmentTools" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
 </CodeLite_Workspace>
