@@ -9,7 +9,8 @@
   <Project Name="assignmentSolution" Path="assignmentSolution/assignmentSolution.project" Active="No"/>
   <Project Name="assSolveFunctions" Path="assSolveFunctions/assSolveFunctions.project" Active="No"/>
   <Project Name="get2DarrayFunction" Path="get2DarrayFunction/get2DarrayFunction.project" Active="No"/>
-  <Project Name="assignmentTools" Path="assignmentTools/assignmentTools.project" Active="Yes"/>
+  <Project Name="assignmentTools" Path="assignmentTools/assignmentTools.project" Active="No"/>
+  <Project Name="beastMode" Path="beastMode/beastMode.project" Active="Yes"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug" Selected="yes">
       <Environment/>
@@ -23,6 +24,7 @@
       <Project Name="assSolveFunctions" ConfigName="Debug"/>
       <Project Name="get2DarrayFunction" ConfigName="Debug"/>
       <Project Name="assignmentTools" ConfigName="Debug"/>
+      <Project Name="beastMode" ConfigName="Debug"/>
     </WorkspaceConfiguration>
     <WorkspaceConfiguration Name="Release" Selected="yes">
       <Environment/>
@@ -36,6 +38,7 @@
       <Project Name="assSolveFunctions" ConfigName="Release"/>
       <Project Name="get2DarrayFunction" ConfigName="Release"/>
       <Project Name="assignmentTools" ConfigName="Release"/>
+      <Project Name="beastMode" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
 </CodeLite_Workspace>
