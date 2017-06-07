@@ -1,8 +1,8 @@
 .PHONY: clean All
 
 All:
-	@echo "----------Building project:[ beastMode - Debug ]----------"
-	@cd "beastMode" && "$(MAKE)" -f  "beastMode.mk"
+	@echo "----------Building project:[ assSolveFunctions - Debug ]----------"
+	@cd "assSolveFunctions" && "$(MAKE)" -f  "assSolveFunctions.mk"
 clean:
-	@echo "----------Cleaning project:[ beastMode - Debug ]----------"
-	@cd "beastMode" && "$(MAKE)" -f  "beastMode.mk" clean
+	@echo "----------Cleaning project:[ assSolveFunctions - Debug ]----------"
+	@cd "assSolveFunctions" && "$(MAKE)" -f  "assSolveFunctions.mk" clean

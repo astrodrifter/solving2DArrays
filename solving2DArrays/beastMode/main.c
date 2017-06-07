@@ -1,20 +1,20 @@
 #include <stdio.h>
-int getNum();
+
+//void fillRowArray(int rowArray[], int size);
+void fillArray(int *array, int size);
+
 int main(int argc, char **argv)
 {
     //get size
-    int size = getNum();
+    int size;
+    scanf("%i",&size);
 	printf("size = %i x %i\n",size,size);
     
     //get array
     int array[size][size];
-    for(int i = 0; i < size; i++)
-    {
-        for(int j =0; j < size; j++)
-        {
-            array[i][j] = getNum();
-        }
-    }
+    int *arrayPtr = array;
+    fillArray(arrayPtr, size);
+    
     
     //print array
     printf("\nUnsolved array:\n");
@@ -26,12 +26,35 @@ int main(int argc, char **argv)
         }
         printf("\n");
     }
+    
+    //seperate to rows and columns
+    //int rowArray[size];
+    //fillRowArray(rowArray,size);
+    
+    
+    /*for(int i = 0; i< size; i++)
+    {
+         printf("%i ",rowArray[i]);
+    }*/
+    
 	return 0;
 }
 
-int getNum()
+/*void fillRowArray(int rowArray[], int size)
 {
-    int num;
-    scanf("%i",&num);
-    return num;
+    for(int i = 0; i< size; i++)
+    {
+         scanf("%i",&rowArray[i]);
+    }
+}*/
+
+void fillArray(int *array, int size)
+{
+    for(int i = 0; i < size; i++)
+    {
+        for(int j =0; j < size; j++)
+        {
+            scanf("%i",(*(array+i)+j));
+        }
+    }
 }
